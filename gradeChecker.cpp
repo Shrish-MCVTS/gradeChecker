@@ -8,20 +8,25 @@ Grade Checkers
 using namespace std;
 
 int main(){
-//setting up array for multiple grades
+//setting up an array for multiple grades
 const int grade_Num = 5;
 float grades[grade_Num];
 //asking for the grades
 for(int i = 0; i<grade_Num;++i){
 cout << "What was your " << i+1 << "st grade?" << endl;
 cin >> grades[i];
+/*if(grades[i]>=100 || grades[i] <0){
+    --i;
+}
+A validator for the input, but I don't know if it works
+    */
 }
 //adding the grades into a variable
 float sum;
 for(int i = 0;i<grade_Num;++i){
     sum+= grades[i];
 }
-//gettingn the average
+//getting the average
 float average;
 average = sum/grade_Num;
 //checking average of the 5 grades
@@ -38,4 +43,5 @@ else{
     cout << "You have a failing average of 5 of your grades";
 }
     return 0;
+
 }
